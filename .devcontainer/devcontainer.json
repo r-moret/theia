@@ -11,5 +11,8 @@
     ],
     "features": {
         "github-cli": "latest"
+    },
+    "settings": {
+        "python.formatting.provider": "black"
     }
 }
