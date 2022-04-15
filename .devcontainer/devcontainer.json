@@ -1,6 +1,7 @@
 {
     "build": {
         "dockerfile": "Dockerfile",
+        "context": "..",
     },
     "extensions": [
         "ms-python.python",
@@ -15,5 +16,5 @@
     "settings": {
         "python.formatting.provider": "black",
         "python.defaultInterpreterPath": "/theia-env/bin/python"
-    }
+    },
 }
