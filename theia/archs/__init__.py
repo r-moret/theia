@@ -1,1 +1,1 @@
-from theia.archs.unet import UNet
+from .unet import UNet

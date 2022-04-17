@@ -1,2 +1,1 @@
-from theia import archs
-from theia.model import Model
+from .model import Model
