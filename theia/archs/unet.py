@@ -17,14 +17,16 @@ class UNet(th.Model):
     def __init__(self, input_shape: Tuple[int] = None, n_classes: int = None) -> None:
         self.keras_model = self._keras_unet(input_shape, n_classes)
 
-    def compile(self, loss: Callable = None, optimizer: Optimizer = None) -> None:
+    def compile(
+        self, loss: Callable = None, optimizer: Optimizer = None, *args, **kwargs
+    ) -> None:
         self.keras_model.compile(optimizer, loss)
 
-    def fit(self, X: Any, y: Any = None) -> None:
-        self.keras_model.fit(X, y)
+    def fit(self, X: Any, y: Any = None, *args, **kwargs) -> None:
+        self.keras_model.fit(X, y, *args, **kwargs)
 
-    def predict(self, X: Any) -> Any:
-        return self.keras_model.predict(X)
+    def predict(self, X: Any, *args, **kwargs) -> Any:
+        return self.keras_model.predict(X, *args, **kwargs)
 
     @staticmethod
     def _keras_unet(input_shape: Tuple[int] = None, n_classes: int = None) -> Model:
